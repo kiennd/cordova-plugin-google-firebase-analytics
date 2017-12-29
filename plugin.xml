@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-google-firebase-analytics"
+        version="0.1.0">
+
+  <name>Firebase Analytics Plugin</name>
+  <description>Cordova plugin for Google Firebase Analytics</description>
+  <author>Joshua McFarland</author>
+  <license>MIT</license>
+  <keywords>cordova,google,firebase,analytics</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=6.4.0" />
+    <engine name="cordova-android" version=">=6.3.0" />
+    <engine name="cordova-ios" version=">=4.3.0" />
+  </engines>
+
+  <js-module src="www/firebase-analytics.js" name="FirebaseAnalyticsPlugin">
+    <clobbers target="plugins.firebase.analytics" />
+  </js-module>
+
+  <dependency id="cordova-plugin-google-firebase" version="0.1.4"/>
+
+  <platform name="android">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="FirebaseAnalyticsPlugin" >
+        <param name="android-package" value="com.jernung.plugins.firebase.analytics.FirebaseAnalyticsPlugin" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
+
+    <source-file src="src/android/FirebaseAnalyticsPlugin.java" target-dir="src/com/jernung/plugins/firebase/analytics" />
+
+  </platform>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+			<feature name="FirebaseAnalyticsPlugin">
+				<param name="ios-package" value="FirebaseAnalyticsPlugin" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+
+    <framework src="AdSupport.framework" />
+
+    <source-file src="src/ios/FirebaseAnalyticsPlugin.swift" />
+
+  </platform>
+
+</plugin>
