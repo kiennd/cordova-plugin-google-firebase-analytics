@@ -34,7 +34,6 @@
       <uses-permission android:name="android.permission.INTERNET" />
     </config-file>
 
-    <framework src="com.google.firebase:firebase-core:11.8.0" />
     <framework src="com.google.android.gms:play-services-tagmanager:11.0.4" />
 
     <source-file src="src/android/FirebaseAnalyticsPlugin.java" target-dir="src/com/jernung/plugins/firebase/analytics" />
@@ -51,7 +50,6 @@
 		</config-file>
 
     <framework src="AdSupport.framework" />
-    <framework src="Firebase/Core" type="podspec" spec="~> 4.8.1"/>
     <framework src="GoogleTagManager" type="podspec" spec="~> 6.0.0"/>
 
     <source-file src="src/ios/FirebaseAnalyticsPlugin.swift" />
