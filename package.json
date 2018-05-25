@@ -1,12 +1,12 @@
 {
-  "name": "cordova-plugin-google-firebase-analytics",
+  "name": "kiennd-cordova-plugin-google-firebase-analytics",
   "version": "0.5.1",
   "description": "Cordova plugin for Google Firebase Analytics.",
   "author": "Joshua McFarland",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcfarljw/cordova-plugin-google-firebase-analytics"
+    "url": "https://github.com/kiennd/cordova-plugin-google-firebase-analytics"
   },
   "engines" : {
     "node" : ">=6.0.0",
@@ -22,7 +22,7 @@
     "google"
   ],
   "cordova": {
-    "id": "cordova-plugin-google-firebase-analytics",
+    "id": "kiennd-cordova-plugin-google-firebase-analytics",
     "platforms": [
       "android",
       "ios"
